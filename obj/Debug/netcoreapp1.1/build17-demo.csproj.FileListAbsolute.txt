@@ -1,0 +1,8 @@
+C:\Projects\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.deps.json
+C:\Projects\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.runtimeconfig.json
+C:\Projects\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.runtimeconfig.dev.json
+C:\Projects\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.dll
+C:\Projects\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.pdb
+C:\Projects\build17-demo\obj\Debug\netcoreapp1.1\build17-demo.AssemblyInfo.cs
+C:\Projects\build17-demo\obj\Debug\netcoreapp1.1\build17-demo.dll
+C:\Projects\build17-demo\obj\Debug\netcoreapp1.1\build17-demo.pdb
