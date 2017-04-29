@@ -9,12 +9,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using React.AspNet;
 using Microsoft.AspNetCore.Http;
-
+using JavaScriptEngineSwitcher.Core;
+using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.Jint;
+using System.Data.SqlClient;
 
 namespace build17_demo
 {
     public class Startup
     {
+        public static SqlConnectionStringBuilder connectionBuilder = new SqlConnectionStringBuilder();
+            
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -23,6 +28,11 @@ namespace build17_demo
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+
+            connectionBuilder.DataSource = "localhost";
+            connectionBuilder.UserID = "sa";
+            connectionBuilder.Password = "Luis9000"; 
+            connectionBuilder.InitialCatalog = "EFSampleDB";
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -51,6 +61,11 @@ namespace build17_demo
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            var engineSwitcher = JsEngineSwitcher.Instance;
+            engineSwitcher.DefaultEngineName = "Jint";
+            engineSwitcher.EngineFactories.AddJint();
+
 
             app.UseReact(config =>
             {

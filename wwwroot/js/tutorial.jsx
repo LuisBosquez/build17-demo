@@ -1,5 +1,3 @@
-alert("loaded");
-
 var CommentBox = React.createClass({
   render: function() {
     return (
