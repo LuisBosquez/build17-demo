@@ -7,6 +7,7 @@ echo Pull and run microsoft/mssql-server-linux Docker image from Docker Hub
 docker pull microsoft/mssql-server-linux
 docker run --name sanitation-station -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=//build2017' -p 1433:1433 -v /azurebackups:/azurebackups -d microsoft/mssql-server-linux 
 docker ps
+sleep 5
 
 echo Restoring production database into sanitation environment
 sqlcmd -Usa -P//build2017 -i sql/Restore_Production_Database_as_Development.sql
