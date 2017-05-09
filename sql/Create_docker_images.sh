@@ -53,7 +53,6 @@ docker rmi db-dev-big-tmp
 printf "\nFinal list of images\n"
 docker images
 
--- Publish images to repo
 #docker run --name db-big -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=//build2017' -p 1433:1433 -d db-dev-big /opt/mssql/bin/sqlservr
 #docker run --name db-small -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=//build2017' -p 1433:1433 -d db-dev-small /opt/mssql/bin/sqlservr
 
