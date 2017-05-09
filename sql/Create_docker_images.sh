@@ -1,7 +1,7 @@
 # Mount Azure file
 # sudo apt-get install cifs-utils
 # mkdir /azurebackups
-# sudo mount -t cifs //sql2017builddemo.file.core.windows.net/backups /azurebackups -o vers=3.0,username=sql2017builddemo,password=XVjLIwjTTDRtNuK5mXRfuRz+R2oq+e9arnBBVEoMY38cV+WCF6gl415f5hY5n5NpKAFMpEOP7rjVnnoHHZzAsg==,dir_mode=0777,file_mode=0777
+sudo mount -t cifs //sql2017builddemo.file.core.windows.net/backups /azurebackups -o vers=3.0,username=sql2017builddemo,password=XVjLIwjTTDRtNuK5mXRfuRz+R2oq+e9arnBBVEoMY38cV+WCF6gl415f5hY5n5NpKAFMpEOP7rjVnnoHHZzAsg==,dir_mode=0777,file_mode=0777
  
 printf "\nPull and run microsoft/mssql-server-linux Docker image from Docker Hub\n"
 docker pull microsoft/mssql-server-linux
