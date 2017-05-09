@@ -74,11 +74,11 @@ namespace build17_demo.Controllers
 
         [HttpPost]
         [Route("/api/comments")]
-        public IActionResult Post(string author, string text)
+        public IActionResult Post(string author, string text, string species)
         {   
             using (DataContext context = new DataContext(Startup.connectionBuilder.ConnectionString))
             {
-                Comment newComment = new Comment { Text = text, Author = author };
+                Comment newComment = new Comment { Text = text, Author = author, Species = species };
                 context.Comments.Add(newComment);
                 context.SaveChanges();
                 Console.WriteLine("\nCreated Comment: " + newComment.ToString());
