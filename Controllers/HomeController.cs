@@ -10,28 +10,6 @@ namespace build17_demo.Controllers
 {
     public class HomeController : Controller
     {
-        static HomeController()
-        {
-            using (DataContext context = new DataContext(Startup.connectionBuilder.ConnectionString))
-            {
-                context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
-
-                string[] texts = new string[]{"Hi", "Hello", "Hola"};
-                string[] authors = new string[]{"Travis", "Luis", "Louise"};
-                string[] species = new string[]{"whale", "whale", "turtle"};
-
-                for (int i = 0; i < 3; i++)
-                {
-                    Comment newComment = new Comment { Text = texts[i], Author = authors[i], Species = species[i] };
-                    context.Comments.Add(newComment);
-                    context.SaveChanges();
-                    Console.WriteLine("\nCreated Comment: " + newComment.ToString());
-                }
-
-            }
-        }
-
         public IActionResult Index()
         {
             return View();
