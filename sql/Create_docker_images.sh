@@ -38,7 +38,6 @@ docker rm -f sanitation-station
 printf "\nAllmost finished images\n"
 docker images
 
--- Flatten images
 printf "\nFlattening small image to reduce size\n"
 docker run --name tmp-small -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=//build2017' -p 1433:1433 -v /azurebackups:/azurebackups -d db-dev-small-tmp
 docker export tmp-small | docker import - db-dev-small:latest
