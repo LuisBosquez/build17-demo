@@ -14,3 +14,11 @@ C:/Projects/build17-demo/obj/Debug/netcoreapp1.1/build17-demo.pdb
 /Users/luis/Projects/build17-demo/obj/Debug/netcoreapp1.1/build17-demo.AssemblyInfo.cs
 /Users/luis/Projects/build17-demo/obj/Debug/netcoreapp1.1/build17-demo.dll
 /Users/luis/Projects/build17-demo/obj/Debug/netcoreapp1.1/build17-demo.pdb
+c:\Dev\Microsoft\build\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.deps.json
+c:\Dev\Microsoft\build\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.runtimeconfig.json
+c:\Dev\Microsoft\build\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.runtimeconfig.dev.json
+c:\Dev\Microsoft\build\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.dll
+c:\Dev\Microsoft\build\build17-demo\bin\Debug\netcoreapp1.1\build17-demo.pdb
+c:\Dev\Microsoft\build\build17-demo\obj\Debug\netcoreapp1.1\build17-demo.AssemblyInfo.cs
+c:\Dev\Microsoft\build\build17-demo\obj\Debug\netcoreapp1.1\build17-demo.dll
+c:\Dev\Microsoft\build\build17-demo\obj\Debug\netcoreapp1.1\build17-demo.pdb

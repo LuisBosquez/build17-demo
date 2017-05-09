@@ -30,9 +30,12 @@ namespace build17_demo
             Configuration = builder.Build();
 
             connectionBuilder.DataSource = "localhost";
+            connectionBuilder.IntegratedSecurity = true;
+            /* 
             connectionBuilder.UserID = "sa";
             connectionBuilder.Password = "Luis9000"; 
-            connectionBuilder.InitialCatalog = "EFSampleDB";
+            */
+            connectionBuilder.InitialCatalog = "SQL2017BuildDemo_Production";
         }
 
         public IConfigurationRoot Configuration { get; }
