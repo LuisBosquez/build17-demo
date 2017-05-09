@@ -19,9 +19,14 @@ namespace build17_demo
     public class Startup
     {
         public static SqlConnectionStringBuilder connectionBuilder = new SqlConnectionStringBuilder();
-            
+        
         public Startup(IHostingEnvironment env)
         {
+            var server = Configuration["DatabaseServer"];
+            var database = Configuration["DatabaseName"];
+            var user = Configuration["DatabaseUser"];
+            var password = Configuration["DatabaseUserPassword"];
+
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -29,10 +34,10 @@ namespace build17_demo
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
 
-            connectionBuilder.DataSource = "localhost";
-            connectionBuilder.UserID = "sa";
-            connectionBuilder.Password = "Luis9000"; 
-            connectionBuilder.InitialCatalog = "EFSampleDB";
+            connectionBuilder.DataSource = server;
+            connectionBuilder.UserID = user;
+            connectionBuilder.Password = password; 
+            connectionBuilder.InitialCatalog = database;
         }
 
         public IConfigurationRoot Configuration { get; }
