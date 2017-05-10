@@ -1,7 +1,7 @@
-USE SQL2017BuildDemo_DevSmall;
+USE ContosoUniversity_DevSmall;
 
-DELETE TOP(999990) dbo.Comments;
+DELETE dbo.Person WHERE ID > 20;
 
 -- Compact and shrink.
-DBCC SHRINKFILE('SQL2017BuildDemo_Data', 1);
-DBCC SHRINKFILE('SQL2017BuildDemo_Log', 1);
+DBCC SHRINKFILE('ContosoUniversity', 1);
+DBCC SHRINKFILE('ContosoUniversity_Log', 1);

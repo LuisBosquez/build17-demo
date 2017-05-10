@@ -1,8 +1,8 @@
-USE SQL2017BuildDemo_DevBig;
+USE ContosoUniversity_DevBig;
 
 -- Sanitize production data for development use.
 -- Use Norwegian encryption.
-UPDATE dbo.Comments SET
-	Author = REVERSE(Author)
-	,Text = REVERSE(Text);
+UPDATE dbo.Person SET
+	FirstName = REVERSE(FirstName)
+	,LastName = REVERSE(LastName);
 
